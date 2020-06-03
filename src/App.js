@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 
+import MainHeader from './components/MainHeader/MainHeader.js';
+
 function App() {
   const [selectedRegionTitle, setSelectedRegionTitle] = useState('Europe');
   const [selectedBase, setSelectedBase] = useState('EUR');
@@ -25,10 +27,10 @@ useEffect(doFetch, [selectedRegionTitle, selectedBase]);
 
   return (
     <div className="App">
-      <header>
-            <h1>Currency Exchange Rates</h1>
-            <h2>Base Currency: 1 {selectedBase}</h2>
-        </header>
+      <MainHeader
+        title="Currency Exchange Rates"
+        
+      />
 
         <div className="Container">
             <div className="Graph">
