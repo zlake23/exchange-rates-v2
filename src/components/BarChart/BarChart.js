@@ -1,21 +1,13 @@
 import React from 'react';
-import './Button.css';
+import './BarChart.css';
 
-function Button(props) {
-  let className = 'Button';
-
-  if (props.type === 'gray') {
-    className = 'Button Button--gray';
-  } else if(props.type === 'primary') {
-    className = 'Button Button--primary';
-  }
-
-
+function BarChart(props) {
+  
   return (
-    <div className={className} onClick={props.onClick}>
-      {props.children}
+    <div className="Graph">
+
     </div>
   );
 }
 
-export default Button;
+export default BarChart;

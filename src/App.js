@@ -29,10 +29,15 @@ useEffect(doFetch, [selectedRegionTitle, selectedBase]);
     <div className="App">
       <MainHeader
         title="Currency Exchange Rates"
-        
+        subtitle={'Base Currency: 1 ' + selectedBase}
       />
 
         <div className="Container">
+          {/* BarChart component */
+            /* GraphHeader component */
+            /* GraphText component */ 
+            /* GraphContent component */
+          }
             <div className="Graph">
                 <div className="Graph-select">
                   <div>
