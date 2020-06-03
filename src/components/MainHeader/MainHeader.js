@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './MainHeader.css';
 
 function MainHeader(props) {
-  
+
   return (
     <header>
     <h1>{props.title}</h1>
