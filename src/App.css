@@ -7,14 +7,8 @@
   --border-radius: 10px;
 }
 
-
 body {
   background: var(--bg-color);
-}
-
-header {
-  color: var(--header-text);
-  text-align: center;
 }
 
 .Container {
@@ -27,16 +21,6 @@ header {
   background: var(--graph-bg);
   grid-template-columns: 200px 1000px;
   grid-template-rows: 50px 600px 50px;
-}
-
-.Graph-select {
-  grid-column: 1 / span 3;
-  grid-row: 1;
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  margin-top: 15px;
-  
 }
 
 .Graph-text {
