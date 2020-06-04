@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 
 import MainHeader from './components/MainHeader/MainHeader.js';
+import BarChartHeader from './components/BarChartHeader/BarChartHeader.js';
 
 function App() {
   const [selectedRegionTitle, setSelectedRegionTitle] = useState('Europe');
@@ -39,7 +40,14 @@ useEffect(doFetch, [selectedRegionTitle, selectedBase]);
             /* GraphContent component */
           }
             <div className="Graph">
-                <div className="Graph-select">
+              <BarChartHeader
+                className="Graph-select"
+                regionSelect="Select Continental Region:"
+                baseSelect="Select base currency:"
+                onChangeRegion={event => setSelectedRegionTitle(event.target.value)}
+                onChangeBase={event => setSelectedBase(event.target.value)}
+              />
+                {/* <div className="Graph-select">
                   <div>
                     <span>Select Continental Region:</span>
                     <select onChange={event => setSelectedRegionTitle(event.target.value)}>
@@ -61,7 +69,7 @@ useEffect(doFetch, [selectedRegionTitle, selectedBase]);
                         <option>AUD</option>
                     </select>
                     </div>
-                </div>
+                </div> */}
                 <div className="Graph-text">
                   {
                     rates

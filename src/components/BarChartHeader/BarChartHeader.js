@@ -4,10 +4,10 @@ import './BarChartHeader.css';
 function BarChartHeader(props) {
   
   return (
-    <div className="Graph-select">
+    <div className={props.className}>
     <div>
-      <span>Select Continental Region:</span>
-      <select onChange={event => setSelectedRegionTitle(event.target.value)}>
+      <span>{props.regionSelect}</span>
+      <select onChange={props.onChangeRegion}>
           
           <option>Europe</option>
           <option>Asia</option>
@@ -17,8 +17,8 @@ function BarChartHeader(props) {
       </select>
       </div>
       <div>
-      <span>Select base currency:</span>
-      <select onChange={event => setSelectedBase(event.target.value)}>
+      <span>{props.baseSelect}</span>
+      <select onChange={props.onChangeBase}>
           <option>EUR</option>
           <option>USD</option>
           <option>CAD</option>
