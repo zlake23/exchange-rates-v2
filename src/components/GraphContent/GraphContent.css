@@ -37,18 +37,12 @@
 }
 
 @media screen and (max-width: 650px) {
-  .Graph-bar {
-      font-size: 10px;
-  }
   .Graph-bar:hover {
       padding: 1px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .Graph-bar {
-      font-size: 10px;
-  }
   .Graph-bar:hover {
       padding: 1px;
   }
