@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import './components/MainHeader/MainHeader.css';
 
 import MainHeader from './components/MainHeader/MainHeader.js';
 import BarChartHeader from './components/BarChartHeader/BarChartHeader.js';
