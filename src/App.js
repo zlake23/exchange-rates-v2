@@ -3,6 +3,8 @@ import './App.css';
 
 import MainHeader from './components/MainHeader/MainHeader.js';
 import BarChartHeader from './components/BarChartHeader/BarChartHeader.js';
+import GraphText from './components/GraphText/GraphText.js';
+import GraphContent from './components/GraphContent/GraphContent.js';
 
 function App() {
   const [selectedRegionTitle, setSelectedRegionTitle] = useState('Europe');
@@ -32,13 +34,7 @@ useEffect(doFetch, [selectedRegionTitle, selectedBase]);
         title="Currency Exchange Rates"
         subtitle={'Base Currency: 1 ' + selectedBase}
       />
-
         <div className="Container">
-          {/* BarChart component */
-            /* GraphHeader component */
-            /* GraphText component */ 
-            /* GraphContent component */
-          }
             <div className="Graph">
               <BarChartHeader
                 className="Graph-select"
@@ -47,28 +43,19 @@ useEffect(doFetch, [selectedRegionTitle, selectedBase]);
                 onChangeRegion={event => setSelectedRegionTitle(event.target.value)}
                 onChangeBase={event => setSelectedBase(event.target.value)}
               />
-      
-                <div className="Graph-text">
-                  {
-                    rates
-                    .sort()
-                    .filter(rate => selectedRegion[selectedRegionTitle].includes(rate[0]))
-                    .map(rate => (
-                    <div className="Graph-text" key={rate[0]}>
-                      {rate[0]}, {rate[1]}
-                    </div>
-                    ))
-                  }
-                </div>
-                <div className="Graph-content">
-                  {
-                    rates
-                    .filter(rate => selectedRegion[selectedRegionTitle].includes(rate[0]))
-                    .map(rate => (
-                    <div className="Graph-bar" key={rate[0]} style={{width: (1/rate[1] * 100) + '%'}}></div>  
-                    ))
-                  }
-                </div>
+              <GraphText
+                className="Graph-text"
+                ratesData={rates}
+                selectedRegion={selectedRegion}
+                selectedRegionTitle={selectedRegionTitle}
+              />
+             <GraphContent
+                outerDivClassName="Graph-content"
+                innerDivClassName="Graph-bar"
+                ratesData={rates}
+                selectedRegion={selectedRegion}
+                selectedRegionTitle={selectedRegionTitle}
+              />
             </div>
         </div>
     </div>
