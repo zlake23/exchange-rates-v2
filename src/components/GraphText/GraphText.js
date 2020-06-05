@@ -4,13 +4,13 @@ import './GraphText.css';
 function GraphText(props) {
 
   return (
-    <div className="Graph-text">
+    <div className={props.className}>
     {
-      rates
+      props.ratesData
       .sort()
-      .filter(rate => selectedRegion[selectedRegionTitle].includes(rate[0]))
+      .filter(rate => props.selectedRegion[props.selectedRegionTitle].includes(rate[0]))
       .map(rate => (
-      <div className="Graph-text" key={rate[0]}>
+      <div className={props.className} key={rate[0]}>
         {rate[0]}, {rate[1]}
       </div>
       ))
