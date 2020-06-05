@@ -3,27 +3,33 @@ import './BarChartHeader.css';
 
 function BarChartHeader(props) {
   
+  const regions = [
+    'Europe', 'Asia', 'North America', 'South America', 'Africa/Oceania',
+  ];
+  const baseCurrencies = [
+    'EUR', 'USD', 'CAD', 'GBP', 'AUD',
+  ];
+
   return (
     <div className={props.className}>
     <div>
       <span>{props.regionSelect}</span>
       <select onChange={props.onChangeRegion}>
-          
-          <option>Europe</option>
-          <option>Asia</option>
-          <option>North America</option>
-          <option>South America</option>
-          <option>Africa/Oceania</option>
+          {
+            regions.map(region => (
+              <option>{region}</option>
+            ))
+          }
       </select>
       </div>
       <div>
       <span>{props.baseSelect}</span>
       <select onChange={props.onChangeBase}>
-          <option>EUR</option>
-          <option>USD</option>
-          <option>CAD</option>
-          <option>GBP</option>
-          <option>AUD</option>
+          {
+            baseCurrencies.map(base => (
+              <option>{base}</option>
+            ))
+          }
       </select>
       </div>
   </div>
