@@ -5,12 +5,12 @@ function GraphContent(props) {
 
 
   return (
-    <div className="Graph-content">
+    <div className={props.outerDivClassName}>
                   {
-                    rates
-                    .filter(rate => selectedRegion[selectedRegionTitle].includes(rate[0]))
+                    props.ratesData
+                    .filter(rate => props.selectedRegion[props.selectedRegionTitle].includes(rate[0]))
                     .map(rate => (
-                    <div className="Graph-bar" key={rate[0]} style={{width: (1/rate[1] * 100) + '%'}}></div>  
+                    <div className={props.innerDivClassName} key={rate[0]} style={{width: (1/rate[1] * 100) + '%'}}></div>  
                     ))
                   }
                 </div>
