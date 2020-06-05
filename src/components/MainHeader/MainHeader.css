@@ -1,3 +1,7 @@
+:root {
+  --header-text: #e7c710;
+}
+
 header {
   color: var(--header-text);
   text-align: center;
