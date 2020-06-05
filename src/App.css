@@ -23,49 +23,6 @@ body {
   grid-template-rows: 50px 600px 50px;
 }
 
-.Graph-text {
-  grid-row: 2;
-  grid-column: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  margin-right: 3px;
-}
-.Graph-content {
-  grid-row: 2;
-  grid-column: 2;
-  border: 5px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-
-
-.Graph-bar {
-  background: var(--header-text);
-  height: var(--bar-height);
-  color: black;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  max-width: 98%;
-  min-width: 2px;
-
-}
-
-.Graph-bar:hover {
-  background: var(--bg-color);
-  transition: 1.3s;
-  box-shadow: 5px 5px 3px black;
-  padding: 3px;
-  font-size: 20px;
-  border: 3px solid var(--border-color);
-  color: var(--border-color);
-}
-
 @media screen and (max-width: 1200px) {
   .Graph {
     grid-template-columns: 150px 900px 100px;
@@ -88,31 +45,19 @@ body {
   .Graph {
       grid-template-columns: 1fr 500px 1fr;
   }
-  .Graph-bar:hover {
-      padding: 2px;
-  }
+
 }
 
 @media screen and (max-width: 650px) {
   .Graph {
       grid-template-columns: 1fr 400px 1fr;
   }
-  .Graph-bar {
-      font-size: 10px;
-  }
-  .Graph-bar:hover {
-      padding: 1px;
-  }
+
 }
 
 @media screen and (max-width: 600px) {
   .Graph {
       grid-template-columns: 1fr 300px 1fr;
   }
-  .Graph-bar {
-      font-size: 10px;
-  }
-  .Graph-bar:hover {
-      padding: 1px;
-  }
+
 };
