@@ -47,29 +47,7 @@ useEffect(doFetch, [selectedRegionTitle, selectedBase]);
                 onChangeRegion={event => setSelectedRegionTitle(event.target.value)}
                 onChangeBase={event => setSelectedBase(event.target.value)}
               />
-                {/* <div className="Graph-select">
-                  <div>
-                    <span>Select Continental Region:</span>
-                    <select onChange={event => setSelectedRegionTitle(event.target.value)}>
-                        
-                        <option>Europe</option>
-                        <option>Asia</option>
-                        <option>North America</option>
-                        <option>South America</option>
-                        <option>Africa/Oceania</option>
-                    </select>
-                    </div>
-                    <div>
-                    <span>Select base currency:</span>
-                    <select onChange={event => setSelectedBase(event.target.value)}>
-                        <option>EUR</option>
-                        <option>USD</option>
-                        <option>CAD</option>
-                        <option>GBP</option>
-                        <option>AUD</option>
-                    </select>
-                    </div>
-                </div> */}
+      
                 <div className="Graph-text">
                   {
                     rates
